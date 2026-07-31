@@ -1,0 +1,174 @@
+- type: entity
+  abstract: true
+  id: BaseHoloSign
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: TimedDespawn
+    lifetime: 90
+  - type: Clickable
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
+
+- type: entity
+  parent: BaseHoloSign
+  id: HolosignWetFloor
+  name: wet floor sign
+  description: The words flicker as if they mean nothing.
+  components:
+  - type: Sprite
+    sprite: Structures/Holo/wetfloor.rsi
+    state: icon
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseHoloSign
+  id: HoloFan
+  name: holofan
+  description: A barrier of hard light that blocks air, but nothing else.
+  components:
+  - type: Sprite
+    sprite: Structures/Holo/holofan.rsi
+    state: icon
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+  - type: TimedDespawn
+    lifetime: 180
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseHoloSign
+  id: HoloPeel
+  name: holopeel
+  description: A banana peel made of slippery hard light, watch your step!
+  components:
+  - type: Sprite
+    sprite: Structures/Holo/peel.rsi
+    state: icon
+  - type: Physics
+    canCollide: true
+  - type: Slippery
+  - type: StepTrigger
+    intersectRatio: 0.2
+  - type: CollisionWake
+    enabled: false
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+        - SlipLayer
+  - type: TimedDespawn
+    lifetime: 30
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseHoloSign
+  id: HolosignSecurity
+  name: holographic barrier
+  description: A barrier of hard light that blocks movement, but pretty weak.
+  components:
+    - type: Physics
+      canCollide: true
+    - type: Sprite
+      sprite: Structures/Holo/security.rsi
+      state: icon
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.3,-0.3,0.3,0.3"
+          mask:
+            - TableMask
+          layer:
+            - TableLayer
+    - type: TimedDespawn
+      lifetime: 180
+    - type: PointLight
+      enabled: true
+      radius: 3
+      color: red
+    - type: Climbable
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 30
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseHoloSign
+  id: HolosignForcefield
+  name: holographic force field
+  description: A powerful temporal containment field that doesn't let anything through, not even a tesla or singularity.
+  components:
+  - type: Physics
+    canCollide: true
+  - type: Sprite
+    sprite: Structures/Holo/field.rsi
+    state: icon
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: TimedDespawn
+    lifetime: 180
+  - type: PointLight
+    enabled: true
+    radius: 3
+    color: blue
+  - type: ContainmentField
+    throwForce: 0
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

@@ -1,0 +1,16 @@
+- type: gameMapPool
+  id: DefaultMapPool
+  maps:
+  - Bagel
+  - Box
+  - Elkridge
+  - Fland
+  - Marathon
+  - Oasis
+  - Packed
+  - Plasma
+  - Exo
+  - Snowball
+  - Serpentcrest
+  - Sushi
+  - Tram2
