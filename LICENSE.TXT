@@ -1,3 +1,158 @@
+===============================================================================
+STARSHIP TROOPERS SS14 LICENSE
+Copyright (c) 2026 [Denlero]
+===============================================================================
+
+This project is a fork of RMC-14, which is a fork of Space Station 14.
+
+===============================================================================
+PART 1: CODE LICENSE (AGPL-3.0)
+===============================================================================
+
+All source code written specifically for Starship Troopers SS14 
+(including game mechanics, systems, and server logic) is distributed under 
+the GNU Affero General Public License v3.0 (AGPL-3.0).
+
+This license requires that any modified version of the code, when used to 
+provide service over a network, must also be made available in source code 
+form to all users.
+
+Full text: https://www.gnu.org/licenses/agpl-3.0.html
+
+===============================================================================
+PART 2: ASSETS LICENSE (CC BY-NC-ND 4.0)
+===============================================================================
+
+All visual and audio assets, including but not limited to:
+- Sprites and textures
+- 3D models
+- Music and sound effects
+- Logos and icons
+- UI elements
+- Artwork and concept art
+
+are distributed under the Creative Commons 
+Attribution-NonCommercial-NoDerivatives 4.0 International License 
+(CC BY-NC-ND 4.0).
+
+This means:
+
+YOU ARE FREE TO:
+- Share — copy and redistribute the material in any medium or format
+- Provided you give appropriate credit to the original author
+
+YOU ARE NOT PERMITTED TO:
+- Use the material for commercial purposes (including donations, 
+  subscriptions, paid access, in-game purchases, or any form of monetization)
+- Remix, transform, or build upon the material
+- Distribute modified versions of the material
+- Use the material on any public server without explicit written permission
+
+Full legal code: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+===============================================================================
+PART 3: COMMERCIAL LICENSING
+===============================================================================
+
+For commercial use of assets (including running a public server with 
+monetization), please contact:
+[@denlero]
+
+Commercial licenses are available on a case-by-case basis.
+
+===============================================================================
+PART 4: TRADEMARK DISCLAIMER
+===============================================================================
+
+"Starship Troopers" is a registered trademark of Sony Pictures Entertainment 
+Inc. and its respective rights holders. This project is a FAN WORK and is 
+NOT affiliated with, endorsed by, or sponsored by Sony Pictures or any other 
+official rights holders. This is a non-commercial community project created 
+for entertainment purposes only. All rights to the "Starship Troopers" 
+franchise belong to their respective owners.
+
+===============================================================================
+PART 5: ORIGINAL SS14 LICENSE (MIT) - INHERITED CODE
+===============================================================================
+
+Code inherited from Space Station 14 remains under the MIT License as 
+required by the original copyright holders:
+
+===============================================================================
+STARSHIP TROOPERS SS14 ЛИЦЕНЗИЯ
+Copyright (c) 2026 [Название Вашей Студии / Ваше Имя]
+===============================================================================
+
+Данный проект является форком RMC-14, который является форком Space Station 14.
+
+===============================================================================
+ЧАСТЬ 1: ЛИЦЕНЗИЯ НА КОД (AGPL-3.0)
+===============================================================================
+
+Весь исходный код, написанный специально для Starship Troopers SS14 
+(игровые механики, системы, серверная логика), распространяется под 
+лицензией GNU Affero General Public License v3.0 (AGPL-3.0).
+
+Полный текст: https://www.gnu.org/licenses/agpl-3.0.html
+
+===============================================================================
+ЧАСТЬ 2: ЛИЦЕНЗИЯ НА АССЕТЫ (CC BY-NC-ND 4.0)
+===============================================================================
+
+Все визуальные и аудиоресурсы, включая:
+- Спрайты и текстуры
+- 3D-модели
+- Музыку и звуковые эффекты
+- Логотипы и иконки
+- Элементы интерфейса
+- Арт и концепт-арты
+
+распространяются под лицензией Creative Commons 
+Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).
+
+Это означает:
+
+РАЗРЕШЕНО:
+- Делиться — копировать и распространять материал в любом формате
+- При условии указания авторства
+
+ЗАПРЕЩЕНО:
+- Использовать материал в коммерческих целях (включая донаты, подписки, 
+  платный доступ, внутриигровые покупки или любую форму монетизации)
+- Изменять, перерабатывать или создавать производные работы
+- Распространять измененные версии материала
+- Использовать материал на любых публичных серверах без письменного 
+  разрешения правообладателя
+
+Полный текст: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+===============================================================================
+ЧАСТЬ 3: КОММЕРЧЕСКОЕ ЛИЦЕНЗИРОВАНИЕ
+===============================================================================
+
+Для коммерческого использования ассетов (включая запуск публичного сервера 
+с монетизацией) обращайтесь:
+[@denlero]
+
+Коммерческие лицензии предоставляются индивидуально.
+
+===============================================================================
+ЧАСТЬ 4: ОТКАЗ ОТ ПРАВ НА ТОВАРНЫЙ ЗНАК
+===============================================================================
+
+"Starship Troopers" является зарегистрированным товарным знаком Sony Pictures 
+Entertainment Inc. и соответствующих правообладателей. Данный проект является 
+ЛЮБИТЕЛЬСКОЙ РАБОТОЙ и НЕ связан с Sony Pictures или другими официальными 
+правообладателями, не одобрен и не спонсируется ими. Все права на франшизу 
+"Starship Troopers" принадлежат соответствующим правообладателям.
+
+===============================================================================
+ЧАСТЬ 5: ОРИГИНАЛЬНАЯ ЛИЦЕНЗИЯ SS14 (MIT) - УНАСЛЕДОВАННЫЙ КОД
+===============================================================================
+
+Код, унаследованный от Space Station 14, остается под лицензией MIT 
+в соответствии с требованиями оригинальных правообладателей:
+
 MIT License
 
 Copyright (c) 2017-2026 Space Wizards Federation
