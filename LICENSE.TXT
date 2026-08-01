@@ -25,7 +25,6 @@ PART 2: ASSETS LICENSE (CC BY-NC-ND 4.0)
 
 All visual and audio assets, including but not limited to:
 - Sprites and textures
-- 3D models
 - Music and sound effects
 - Logos and icons
 - UI elements
@@ -101,7 +100,6 @@ Copyright (c) 2026 [Название Вашей Студии / Ваше Имя]
 
 Все визуальные и аудиоресурсы, включая:
 - Спрайты и текстуры
-- 3D-модели
 - Музыку и звуковые эффекты
 - Логотипы и иконки
 - Элементы интерфейса
