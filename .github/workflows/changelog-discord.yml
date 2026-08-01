@@ -1,0 +1,56 @@
+name: "Changelog: Send discord webhook"
+
+on:
+  pull_request_target:
+    types: [closed]
+
+jobs:
+  send-discord:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract PR details
+        id: extract
+        run: |
+          BODY=$(printf '%s' "${{ github.event.pull_request.body }}" | base64 -w0)
+          echo "DESCRIPTION_B64=$BODY" >> $GITHUB_OUTPUT
+          echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
+          echo "PR_TITLE=${{ github.event.pull_request.title }}" >> $GITHUB_OUTPUT
+          echo "REPO=${{ github.repository }}" >> $GITHUB_OUTPUT
+          echo "AUTHOR=${{ github.event.pull_request.user.login }}" >> $GITHUB_OUTPUT
+          echo "MERGED_AT=${{ github.event.pull_request.merged_at }}" >> $GITHUB_OUTPUT
+
+      - name: Render Discord payload
+        id: render
+        run: |
+          python3 Tools/pr_changelog.py render-discord \
+            --body-base64 "${{ steps.extract.outputs.DESCRIPTION_B64 }}" \
+            --author "${{ steps.extract.outputs.AUTHOR }}" \
+            --pr "${{ steps.extract.outputs.PR_NUMBER }}" \
+            --repo "${{ steps.extract.outputs.REPO }}" \
+            --pr-title "${{ steps.extract.outputs.PR_TITLE }}" \
+            --time "${{ steps.extract.outputs.MERGED_AT }}" \
+            --output-file discord_payload.json
+
+          if [ -f discord_payload.json ]; then
+            echo "should_send=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_send=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Send to Discord
+        if: steps.render.outputs.should_send == 'true'
+        env:
+          WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
+        run: |
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -d @discord_payload.json \
+            "$WEBHOOK_URL" \
+            --fail \
+            --silent \
+            --show-error
