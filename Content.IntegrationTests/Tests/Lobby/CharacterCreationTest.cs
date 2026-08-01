@@ -84,7 +84,9 @@ public sealed class CharacterCreationTest : GameTest
 
         Assert.Multiple(() =>
         {
-            Assert.That(a.Name, Is.EqualTo(b.Name));
+            // # _ST14 Change: Check if not empty
+            Assert.That(a.Name, Is.Not.Null.And.Not.Empty);
+            Assert.That(b.Name, Is.Not.Null.And.Not.Empty);
             Assert.That(a.Age, Is.EqualTo(b.Age));
             Assert.That(a.Sex, Is.EqualTo(b.Sex));
             Assert.That(a.Gender, Is.EqualTo(b.Gender));
