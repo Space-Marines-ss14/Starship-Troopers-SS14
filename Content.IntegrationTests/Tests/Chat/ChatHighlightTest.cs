@@ -82,7 +82,7 @@ public sealed class ChatHighlightTest : GameTest
         Assert.That(activeHighlights, Contains.Item("rev"));
         // Auto:
         Assert.That(activeHighlights, Contains.Item("Капитан")); // # _ST14 Change
-        Assert.That(activeHighlights, Contains.Item("(?<!\\w)Кэп(?!\\w)")); // # _ST14 Change
+        Assert.That(activeHighlights, Contains.Item("(?<!\\w)кэп(?!\\w)")); // # _ST14 Change
 
         // 5. Disable auto-fill highlights and verify auto-filled highlights are removed
         _configManager.SetCVar(CCVars.ChatAutoFillHighlights, false);
@@ -156,6 +156,6 @@ public sealed class ChatHighlightTest : GameTest
         Assert.That(activeHighlights, Contains.Item("ling"));
         Assert.That(activeHighlights, Contains.Item("rev"));
         Assert.That(activeHighlights, Contains.Item("Капитан")); // # _ST14 Change
-        Assert.That(activeHighlights, Contains.Item("(?<!\\w)Кэп(?!\\w)")); // # _ST14 Change
+        Assert.That(activeHighlights, Contains.Item("(?<!\\w)кэп(?!\\w)")); // # _ST14 Change
     }
 }

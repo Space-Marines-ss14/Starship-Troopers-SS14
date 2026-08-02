@@ -8,7 +8,7 @@
   id: NamesMilitaryFirst
   values:
     prefix: names-military-first-dataset-
-    count: 4
+    count: 5
 
 - type: localizedDataset
   id: NamesMilitaryLast
