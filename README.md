@@ -1,9 +1,9 @@
 <div align="center">
   <img 
     alt="Starship Troopers SS14" 
-    width="880" 
+    width="800" 
     height="300" 
-    src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg"
+    src="https://github.com/Space-Marines-ss14/Starship-Troopers-SS14/blob/00ce9e510c23f289cabea166e5b2b8464949d8ed/starship-troopers.webp"
   >
 </div>
 
